@@ -1,6 +1,7 @@
 ---
 - hosts: decent-snake
   gather_facts: yes
+  zabbix_repo_url: https://repo.zabbix.com/zabbix/{{ zabbix_version }}/debian/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_version }}-1%2Bdebian10_all.deb
   tasks:
       - name: Download zabbix repo package
         get_url:
