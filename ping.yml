@@ -1,4 +1,6 @@
 ---
-tasks:
-name: PING
-- ping
+- name: PING
+  hosts: decent-snake
+  roles:
+    - { role: ../roles/ping }
+    
