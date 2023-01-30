@@ -1,0 +1,4 @@
+become: yes
+
+tasks:
+- ping
