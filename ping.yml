@@ -1,6 +1,0 @@
----
-- name: PING
-  hosts: decent-snake
-  roles:
-    - { role: ../roles/ping }
-    
