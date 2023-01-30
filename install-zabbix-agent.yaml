@@ -1,11 +1,10 @@
 ---
 - hosts: decent-snake
-  gather_facts: yes
-  zabbix_repo_url: https://repo.zabbix.com/zabbix/{{ zabbix_version }}/debian/pool/main/z/zabbix-release/zabbix-release_{{ zabbix_version }}-1%2Bdebian10_all.deb
+  gather_facts: no
   tasks:
       - name: Download zabbix repo package
         get_url:
-            url: "{{ zabbix_repo_url}}"
+            url: "https://repo.zabbix.com/zabbix/5.2/debian/pool/main/z/zabbix-release/zabbix-release_5.2-1%2Bdebian10_all.deb"
             dest: /tmp/zabbix.deb
 
       - name: Install zabbix repo
