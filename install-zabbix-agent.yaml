@@ -1,6 +1,6 @@
 ---
 - hosts: decent-snake
-  gather_facts: no
+  gather_facts: yes
   tasks:
       - name: Download zabbix repo package
         get_url:
