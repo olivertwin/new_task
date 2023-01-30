@@ -2,11 +2,6 @@
 - hosts: decent-snake
   gather_facts: yes
   tasks:
-      - name: gather os specific variables
-        include_vars: "{{ item }}"
-        with_first_found:
-            - "vars/{{ ansible_distribution }}.yaml"
-
       - name: Download zabbix repo package
         get_url:
             url: "{{ zabbix_repo_url}}"
