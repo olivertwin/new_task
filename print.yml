@@ -1,3 +1,0 @@
-- name: Print version
-  debug:
-    msg: "Version {{ semaphore_vars.task_details.incoming_version }} is installed."
