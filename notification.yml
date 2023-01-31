@@ -1,5 +1,5 @@
 - name: send a message to chat in playbook
   telegram:
-    token: '5495424416:AAFtGvYSg5VRkp0e8RzS5fjrOyW6_FytdCA'
-    chat_id: 1057700994
+    token: {{ id }}
+    chat_id: {{ chat }}
     msg: Ansible task finished
