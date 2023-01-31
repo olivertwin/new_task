@@ -1,3 +1,4 @@
+---
 - name: send a message to chat in playbook
   telegram:
     token: {{ id }}
