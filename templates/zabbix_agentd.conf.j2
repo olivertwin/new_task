@@ -1,7 +1,11 @@
 PidFile=/run/zabbix/zabbix_agentd.pid
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
-Server=10.200.1.80
-ServerActive=127.0.0.1
-Hostname=decent-snake
+Server=10.3.19.234,zbx.rcc-group.ru
+ServerActive=10.3.19.234,zbx.rcc-group.ru
+Hostname={{ ansible_facts['hostname'] }}
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
+TLSConnect=psk
+TLSAccept=psk
+TLSPSKIdentity=PSK 001
+TLSPSKFile=/var/lib/zabbix/psk.txt
